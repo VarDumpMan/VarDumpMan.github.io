@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Essai Animation </title>
+    <link rel="stylesheet" href="essai.css">
+</head>
+<body>
+    <div class="load">
+        <span class="letter">C</span>
+        <span class="letter">H</span>
+        <span class="letter">A</span>
+        <span class="letter">R</span>
+        <span class="letter">G</span>
+        <span class="letter">E</span>
+        <span class="letter">M</span>
+        <span class="letter">E</span>
+        <span class="letter">N</span>
+        <span class="letter">T</span>
+    </div>
+    <div class="bouton-container">
+        <div class="bouton">
+            Ouvrir un block 
+        </div>
+        </div>
+    <div class="block-container">
+        <div class="block">
+            <h1> Bienvenu chez Rayton Tech </h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel natus error sequi illo alias vitae in culpa minima earum assumenda. Distinctio, nemo eum sapiente molestiae consequatur quod magni vitae itaque.
+                Sint architecto blanditiis porro esse quam. Unde earum dolorum quae amet at corporis ex corrupti voluptas expedita? Sint molestiae enim, perferendis qui suscipit exercitationem beatae fuga ut, libero inventore accusamus.
+                Accusamus sint illo ex, eius repellat, ab culpa corrupti labore laborum eos harum nostrum ad consequuntur libero possimus temporibus quis veritatis aut iure assumenda excepturi saepe adipisci. Quas, facilis accusamus!
+                Nam consectetur laboriosam autem! Vel aliquam non molestiae inventore exercitationem quas soluta at possimus fuga consequuntur, culpa mollitia similique rem a repellendus alias omnis recusandae explicabo. Iure quaerat voluptas delectus!
+                Explicabo amet asperiores quaerat sint quisquam totam neque sit voluptate incidunt ipsum eligendi, tenetur nihil doloremque tempore dicta esse praesentium unde ipsam repudiandae possimus iure et vitae pariatur laborum! Dignissimos.
+                Sunt reiciendis ut qui dolorum labore adipisci explicabo deleniti inventore placeat voluptate, nisi ad tempora nobis quo eaque consequatur at temporibus eligendi culpa minima aut? Deleniti, eius. Autem, dolores expedita?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dolore quisquam, quam nesciunt error tempore aliquid, delectus, in aliquam minus repellat rem quidem sit quae neque facilis nam dolorem debitis?
+            </p>
+            <div class="fermer">Fermer</div>
+            <div class="ombre">Créer une ombre </div>Tuto JS
+        </div>
+    </div>
+    <div class="ombrage">
+        <div class="fermer">Fermer</div>
+    </div>
+    <script>
+        
+        // Gestion du loading
+        var load = document.querySelector(".load");
+        window.addEventListener('load', () => {
+            load.classList.add('fondu');
+        })
+
+        // Gestion des boutons 
+
+        var bouton = document.querySelector('.bouton');
+        var clock = document.querySelectorAll('.fermer');
+        var block = document.querySelector('.block');
+        var container = document.querySelector('.block-container');
+        var ombre = document.querySelector('.ombre');
+        var ombrage = document.querySelector('.ombrage')
+        bouton.addEventListener('click', ouvrir );
+        // Ici clock est devenu un tableau composé des deux div avec la classe fermer. Donc le premier div est clock[0] et le second clock[1]
+        clock[0].addEventListener('click', fermer );
+        function ouvrir() {
+            container.style.display = 'block';
+        }
+        function fermer() {
+            container.style.display = 'none';
+        }
+        clock[1].addEventListener('click', ()=> {
+            ombrage.style.display = 'none';
+        } )
+
+         //() => veut dire function ()
+        ombre.onclick = ()=> {
+            ombrage.style.display = 'block';
+        }
+        
+    </script>
+</body>
+</html>
